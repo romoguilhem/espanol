@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "home", to: "pages#home"
+  root to: "pages#home"
+  resources :games, only: [:show, :new, :create]
+  
+  # get '*unmatched_route', to: 'pages#home'
 end
