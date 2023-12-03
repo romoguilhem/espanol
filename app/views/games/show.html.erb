@@ -1,2 +1,12 @@
 <h2>Tu veux travailler <%= @game.number_of_words %> mots</h2>
 <h3>C'est parti !</h3>
+<p></p>
+<h3>Traduis les mots suivants:</h3>
+
+<form>
+  <% n = 1 %>
+  <label><%= @translations.first["french"] %>:</label>
+  <input type="text" id="answer"><br><br>
+  <% n +=1 %>
+  <input type="button" value="Envoyer" onclick="traiterFormulaire()">
+</form>
