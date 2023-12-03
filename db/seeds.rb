@@ -16,7 +16,7 @@ puts "Done"
 puts "-------------------------"
 puts "Creating translation..."
 
-filepath = "translations.json"
+filepath = "db/translations.json"
 read = File.read(filepath)
 translations = JSON.parse(read)
 
@@ -27,5 +27,6 @@ translations["translations"].each do |hash|
   new_translation.save!
 end
 
+puts "-------------------------"
 puts "Done, il y a #{Translation.count} traductions."
 
