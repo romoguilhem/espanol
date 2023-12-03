@@ -8,3 +8,24 @@
 
 require "json"
 
+puts "Reset database..."
+
+Translation.destroy_all
+
+puts "Done"
+puts "-------------------------"
+puts "Creating translation..."
+
+filepath = "translations.json"
+read = File.read(filepath)
+translations = JSON.parse(read)
+
+# puts translations["translations"]
+
+translations["translations"].each do |hash|
+  new_translation = Translation.new(french: hash["french"], spanish: hash["spanish"])
+  new_translation.save!
+end
+
+puts "Done, il y a #{Translation.count} traductions."
+

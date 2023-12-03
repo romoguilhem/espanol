@@ -66,7 +66,8 @@
   },
   {
     "french": "déjeuner",
-    "spanish": ["cuisine"]
+    "spanish": "almuerzo",
+    "category": ["cuisine"]
   },
   {
     "french": "manteau",
@@ -101,6 +102,156 @@
   {
     "french": "robe",
     "spanish": "vestido",
+    "category": ["vétements"]
+  },
+  {
+    "french": "légumes",
+    "spanish": "verduras",
+    "category": ["cuisine"]
+  },
+  {
+    "french": "sel",
+    "spanish": "sal",
+    "category": ["cuisine"]
+  },
+  {
+    "french": "lait",
+    "spanish": "leche",
+    "category": ["cuisine"]
+  },
+  {
+    "french": "poisson",
+    "spanish": "pescado",
+    "category": ["animaux", "cuisine"]
+  },
+  {
+    "french": "chapeau",
+    "spanish": "sombrero",
+    "category": ["vétements"]
+  },
+  {
+    "french": "avoir",
+    "spanish": "tener",
+    "category": ["verbes"]
+  },
+  {
+    "french": "araignée",
+    "spanish": "blanca",
+    "category": ["animaux"]
+  },
+  {
+    "french": "blanc",
+    "spanish": "blanco",
+    "category": ["couleur"]
+  },
+  {
+    "french": "noir",
+    "spanish": "negro",
+    "category": ["couleur"]
+  },
+  {
+    "french": "jaune",
+    "spanish": "amarillo",
+    "category": ["couleur"]
+  },
+  {
+    "french": "gris",
+    "spanish": "gris",
+    "category": ["couleur"]
+  },
+  {
+    "french": "orange",
+    "spanish": "naranja",
+    "category": ["couleur", "cuisine"]
+  },
+  {
+    "french": "bleu",
+    "spanish": "azul",
+    "category": ["couleur"]
+  },
+  {
+    "french": "sucre",
+    "spanish": "azucar",
+    "category": ["couleur"]
+  },
+  {
+    "french": "marcher",
+    "spanish": ["azucar", "andar"],
+    "category": ["couleur"]
+  },
+  {
+    "french": "cuisiner",
+    "spanish": "cocinar",
+    "category": ["cuisine", "verbes"]
+  },
+  {
+    "french": "poulet",
+    "spanish": "pollo",
+    "category": ["cuisine", "animaux"]
+  },
+  {
+    "french": "chaussure",
+    "spanish": "zapato",
+    "category": ["vétements"]
+  },
+  {
+    "french": "rouge",
+    "spanish": "rojo",
+    "category": ["couleur"]
+  },
+  {
+    "french": "lire",
+    "spanish": "leer",
+    "category": ["verbes"]
+  },
+  {
+    "french": "oiognon",
+    "spanish": "cebolla",
+    "category": ["cuisine"]
+  },
+  {
+    "french": "taureau",
+    "spanish": "toro",
+    "category": ["animaux"]
+  },
+  {
+    "french": "manger",
+    "spanish": "comer",
+    "category": ["cuisine", "verbes"]
+  },
+  {
+    "french": "libro",
+    "spanish": "livre",
+    "category": ["divers"]
+  },
+  {
+    "french": "boire",
+    "spanish": "beber",
+    "category": ["cuisine", "verbes"]
+  },
+  {
+    "french": "jus",
+    "spanish": "jugo",
+    "category": ["cuisine"]
+  },
+  {
+    "french": "jeu",
+    "spanish": "juego",
+    "category": ["divers"]
+  },
+  {
+    "french": "boulangerie",
+    "spanish": "panaderia",
+    "category": ["divers"]
+  },
+  {
+    "french": "boucherie",
+    "spanish": "carniceria",
+    "category": ["divers"]
+  },
+  {
+    "french": "pull",
+    "spanish": "sueter",
     "category": ["vétements"]
   }
 ]}
