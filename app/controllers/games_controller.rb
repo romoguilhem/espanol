@@ -14,6 +14,14 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+
+    require "json"
+    filepath = "db/translations.json"
+    read = File.read(filepath)
+    translations = JSON.parse(read)
+
+    # @translations = translations
+    @translations = translations["translations"].sample(@game.number_of_words)
   end
 
   private
