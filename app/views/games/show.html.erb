@@ -3,10 +3,40 @@
 <p></p>
 <h3>Traduis les mots suivants:</h3>
 
+<% n = -1 %>
 <form>
-  <% n = 1 %>
-  <label><%= @translations.first["french"] %>:</label>
-  <input type="text" id="answer"><br><br>
-  <% n +=1 %>
-  <input type="button" value="Envoyer" onclick="traiterFormulaire()">
+  <% @translations.each do |hash| %>
+    <% n += 1 %>
+    <label><%= n %> <%= hash["french"] %>:</label>
+    <input type="text" id="answer<%= n %>" class="<%= hash["spanish"] %>"><br><br>
+  <% end %>
+    <div class="size"><%= n %></div>
+  <input type="submit" value="Envoyer">
 </form>
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let size = document.querySelector(".size").innerHTML;
+
+      for (let i = 0; i <= size; i++) {
+        let id = "answer" + i.toString();
+        let answer = document.querySelector(id);
+        console.log(id);
+        console.log(answer.value);
+      }
+      let answer1 = document.querySelector("#answer1");
+
+      console.log(answer1.value);
+      console.log(answer1.classList.value);
+      console.log(answer1.value == answer1.classList.value);
+      console.log(size);
+    });
+  });
+</script>
