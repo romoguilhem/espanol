@@ -1,20 +1,29 @@
-<h2>Tu veux travailler <%= @game.number_of_words %> mots</h2>
+<h2>Tu veux travailler <%= @game.number_of_words %> mots.</h2>
 <h3>C'est parti !</h3>
 <p></p>
 <h3>Traduis les mots suivants:</h3>
 
-<% n = -1 %>
+<% n = 0 %>
 <form>
-  <% @translations.each do |hash| %>
-    <% n += 1 %>
-    <label><%= n %> <%= hash["french"] %>:</label>
-    <input type="text" id="answer<%= n %>" class="<%= hash["spanish"] %>"><br><br>
-  <% end %>
-    <div class="size"><%= n %></div>
+  <div id="list">
+    <% @translations.each do |hash| %>
+      <% n += 1 %>
+      <div id="word<%= n %>" style="display: flex;">
+        <label id="french<%= n %>"><%= hash["french"] %></label>
+        <input type="text" id="input<%= n %>"><br><br>
+        <%# Trick pour récupérer la traduction avec le js %>
+        <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
+      </div>
+    <% end %>
+  </div>
+
+  <%# Trick pour récupérer la taille n de la liste avec le js %>
+  <div id="size" style="display: none;"><%= n %></div>
+
   <input type="submit" value="Envoyer">
 </form>
 
-
+<div id="score"></div>
 
 
 
@@ -23,20 +32,38 @@
     document.querySelector("form").addEventListener("submit", function(event) {
       event.preventDefault();
 
-      let size = document.querySelector(".size").innerHTML;
+      // Taille de la liste
+      let size = document.querySelector("#size").innerHTML;
+      // On va compter les bonnes réponses
+      let point = 0;
 
-      for (let i = 0; i <= size; i++) {
-        let id = "answer" + i.toString();
-        let answer = document.querySelector(id);
-        console.log(id);
-        console.log(answer.value);
+      for (let i = 1; i <= size; i++) {
+        // On récupère la div du mot, l'input, le français et sa traduction
+        let divWord = document.getElementById("word" + i.toString());
+        let input = document.querySelector("#input" + i.toString()).value;
+        let french = document.querySelector("#french" + i.toString()).innerHTML;
+        let spanish = document.getElementById("spanish" + i.toString()).innerHTML;
+
+        if (input == spanish) {
+          // Si la réponse est juste
+          divWord.style.backgroundColor = "green";
+          point++; // Incrémentation
+        } else {
+          // Si la réponse est fausse
+          divWord.insertAdjacentHTML('beforeend', `${french} => ${spanish}`)
+          divWord.style.backgroundColor = "red";
+        }
+      };
+      // On display le résultat
+      let divScore = document.getElementById("score");
+
+      if (point / size <= 0.5) {
+        divScore.innerHTML = `Java le Hutt ferait mieux: ${point} / ${size} !`;
+      } else if ((0.5 <= point / size) && (point / size < 1)) {
+        divScore.innerHTML = `Pas mal Anakin: ${point} / ${size} !`;
+      } else {
+        divScore.innerHTML = `Parfait ${point} / ${size} ! <br>Mais nous ne t'accordons toujours pas le rang de maître.`;
       }
-      let answer1 = document.querySelector("#answer1");
-
-      console.log(answer1.value);
-      console.log(answer1.classList.value);
-      console.log(answer1.value == answer1.classList.value);
-      console.log(size);
     });
   });
 </script>
