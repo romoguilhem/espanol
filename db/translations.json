@@ -122,7 +122,7 @@
   {
     "french": "poisson",
     "spanish": "pescado",
-    "category": ["animaux", "cuisine"]
+    "category": ["animaux"]
   },
   {
     "french": "chapeau",
@@ -162,7 +162,7 @@
   {
     "french": "orange",
     "spanish": "naranja",
-    "category": ["couleur", "cuisine"]
+    "category": ["couleur"]
   },
   {
     "french": "bleu",
@@ -176,7 +176,7 @@
   },
   {
     "french": "marcher",
-    "spanish": ["azucar", "andar"],
+    "spanish": ["caminar", "andar"],
     "category": ["couleur"]
   },
   {
@@ -253,5 +253,190 @@
     "french": "pull",
     "spanish": "sueter",
     "category": ["vétements"]
+  },
+  {
+    "french": "été",
+    "spanish": "verano",
+    "category": ["temps"]
+  },
+  {
+    "french": "hiver",
+    "spanish": "invierno",
+    "category": ["temps"]
+  },
+  {
+    "french": "automne",
+    "spanish": "otono",
+    "category": ["temps"]
+  },
+  {
+    "french": "printemps",
+    "spanish": "primavera",
+    "category": ["temps"]
+  },
+  {
+    "french": "lundi",
+    "spanish": "lunes",
+    "category": ["temps"]
+  },
+  {
+    "french": "mardi",
+    "spanish": "martes",
+    "category": ["temps"]
+  },
+  {
+    "french": "mercredi",
+    "spanish": "miercoles",
+    "category": ["temps"]
+  },
+  {
+    "french": "jeudi",
+    "spanish": "jueves",
+    "category": ["temps"]
+  },
+  {
+    "french": "vendredi",
+    "spanish": "viernes",
+    "category": ["temps"]
+  },
+  {
+    "french": "samedi",
+    "spanish": "sabado",
+    "category": ["temps"]
+  },
+  {
+    "french": "dimanche",
+    "spanish": "domingo",
+    "category": ["temps"]
+  },
+  {
+    "french": "janvier",
+    "spanish": "enero",
+    "category": ["temps"]
+  },
+  {
+    "french": "février",
+    "spanish": "febrero",
+    "category": ["temps"]
+  },
+  {
+    "french": "mars",
+    "spanish": "marzo",
+    "category": ["temps"]
+  },
+  {
+    "french": "avril",
+    "spanish": "abril",
+    "category": ["temps"]
+  },
+  {
+    "french": "mai",
+    "spanish": "mayo",
+    "category": ["temps"]
+  },
+  {
+    "french": "juin",
+    "spanish": "junio",
+    "category": ["temps"]
+  },
+  {
+    "french": "juillet",
+    "spanish": "julio",
+    "category": ["temps"]
+  },
+  {
+    "french": "aout",
+    "spanish": "agosto",
+    "category": ["temps"]
+  },
+  {
+    "french": "septembre",
+    "spanish": "septiembre",
+    "category": ["temps"]
+  },
+  {
+    "french": "octobre",
+    "spanish": "octubre",
+    "category": ["temps"]
+  },
+  {
+    "french": "novembre",
+    "spanish": "noviembre",
+    "category": ["temps"]
+  },
+  {
+    "french": "décembre",
+    "spanish": "diciembre",
+    "category": ["temps"]
+  },
+  {
+    "french": "midi",
+    "spanish": "mediodia",
+    "category": ["temps"]
+  },
+  {
+    "french": "rendez-vous",
+    "spanish": "cita",
+    "category": ["divers"]
+  },
+  {
+    "french": "anniversaire",
+    "spanish": "cumpleaños",
+    "category": ["temps"]
+  },
+  {
+    "french": "date",
+    "spanish": "fecha",
+    "category": ["temps"]
+  },
+  {
+    "french": "aujourd'hui",
+    "spanish": "hoy",
+    "category": ["temps"]
+  },
+  {
+    "french": "l'aube",
+    "spanish": "la madrugada",
+    "category": ["temps"]
+  },
+  {
+    "french": ["demain", "matin"],
+    "spanish": "mañana",
+    "category": ["temps"]
+  },
+  {
+    "french": "vacances",
+    "spanish": "vacaciones",
+    "category": ["temps"]
+  },
+  {
+    "french": "hier",
+    "spanish": "ayer",
+    "category": ["temps"]
+  },
+  {
+    "french": "hier soir",
+    "spanish": "anoche",
+    "category": ["temps"]
+  },
+  {
+    "french": "avec",
+    "spanish": "con",
+    "category": ["conjonction"]
+  },
+  {
+    "french": "et",
+    "spanish": ["y", "e"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": "mais",
+    "spanish": "pero",
+    "category": ["conjonction"]
+  },
+  {
+    "french": "tard",
+    "spanish": "tarde",
+    "category": ["temps"]
   }
 ]}

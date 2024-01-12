@@ -20,14 +20,19 @@
   <%# Trick pour récupérer la taille n de la liste avec le js %>
   <div id="size" style="display: none;"><%= n %></div>
 
-  <input type="submit" value="Envoyer">
+  <input type="submit" value="Hihi" class="button">
 </form>
 
 <div id="score"></div>
 
+<div id="buttons">
+  <div id="correction" class="button">Corrige toi</div>
+  <div id="new" class="button"><%= link_to "Nouvelle Partie", new_game_path %></div>
+</div>
 
 
 <script>
+  // Event Listener sur le Submit
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("form").addEventListener("submit", function(event) {
       event.preventDefault();
@@ -63,7 +68,17 @@
         divScore.innerHTML = `Pas mal Anakin: ${point} / ${size} !`;
       } else {
         divScore.innerHTML = `Parfait ${point} / ${size} ! <br>Mais nous ne t'accordons toujours pas le rang de maître.`;
-      }
+      };
+
+
+    });
+  });
+
+  // Event Listener sur le Correction
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("correction").addEventListener("click", function(event) {
+      event.preventDefault();
+      console.log("salut");
     });
   });
 </script>
