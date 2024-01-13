@@ -1,6 +1,8 @@
 class GamesController < ApplicationController
   def new
     @game = Game.new
+
+    @database_size = database.count
   end
 
   def create
@@ -15,18 +17,20 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
 
-    require "json"
-    filepath = "db/translations.json"
-    read = File.read(filepath)
-    translations = JSON.parse(read)
-
-    # @translations = translations
-    @translations = translations["translations"].sample(@game.number_of_words)
+    @translations = database.sample(@game.number_of_words)
   end
 
   private
 
   def game_params
     params.require(:game).permit(:number_of_words)
+  end
+
+  def database
+    require "json"
+    filepath = "db/translations.json"
+    read = File.read(filepath)
+    json = JSON.parse(read)
+    return json["translations"]
   end
 end

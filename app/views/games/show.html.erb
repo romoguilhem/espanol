@@ -1,7 +1,4 @@
-<h2>Tu veux travailler <%= @game.number_of_words %> mots.</h2>
-<h3>C'est parti !</h3>
-<p></p>
-<h3>Traduis les mots suivants:</h3>
+<h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
 
 <% n = 0 %>
 <form>
@@ -32,6 +29,11 @@
 
 
 <script>
+  // fonction pour enlever les accents
+  function removeAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
   // Event Listener sur le Submit
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("form").addEventListener("submit", function(event) {
@@ -53,10 +55,15 @@
           // Si la réponse est juste
           divWord.style.backgroundColor = "green";
           point++; // Incrémentation
+        } else if (input == removeAccents(spanish)) {
+          // Si la réponse est juste mais mauvais accent(s)
+          divWord.style.backgroundColor = "orange";
+          divWord.insertAdjacentHTML('beforeend', `${french} => ${spanish}`)
+          point += 0.5; // Incrémentation
         } else {
           // Si la réponse est fausse
-          divWord.insertAdjacentHTML('beforeend', `${french} => ${spanish}`)
           divWord.style.backgroundColor = "red";
+          divWord.insertAdjacentHTML('beforeend', `${french} => ${spanish}`)
         }
       };
       // On display le résultat
@@ -78,7 +85,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("correction").addEventListener("click", function(event) {
       event.preventDefault();
-      console.log("salut");
+      console.log("Je suis ton père");
     });
   });
 </script>
