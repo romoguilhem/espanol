@@ -1,38 +1,50 @@
 <h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
 
-<% n = 0 %>
-<form>
-  <div id="list">
-    <% @translations.each do |hash| %>
-      <% n += 1 %>
-      <div id="word<%= n %>" style="display: flex;">
-        <label id="french<%= n %>"><%= hash["french"] %></label>
-        <input type="text" id="input<%= n %>"><br><br>
-        <%# Trick pour récupérer la traduction avec le js %>
-        <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
-      </div>
-    <% end %>
-  </div>
+<% if @translations == "Youpi" %>
+  <p>HEHEHEHEHEHEHE ca maaaarrche</p>
+<% else %>
+  <% n = 0 %>
+  <form>
+    <div id="list">
+      <% @translations.each do |hash| %>
+        <% n += 1 %>
+        <div id="word<%= n %>" style="display: flex;">
+          <label id="french<%= n %>"><%= hash["french"] %></label>
+          <input type="text" id="input<%= n %>"><br><br>
+          <%# Trick pour récupérer la traduction avec le js %>
+          <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
+        </div>
+      <% end %>
+    </div>
 
-  <%# Trick pour récupérer la taille n de la liste avec le js %>
-  <div id="size" style="display: none;"><%= n %></div>
+    <%# Trick pour récupérer la taille n de la liste avec le js %>
+    <div id="size" style="display: none;"><%= n %></div>
 
-  <input type="submit" value="Hihi" class="button">
-</form>
+    <input type="submit" value="Submit" class="button">
+  </form>
+<% end %>
 
 <div id="score"></div>
 
 <div id="buttons">
-  <div id="correction" class="button">Corrige toi</div>
+  <div id="correction" class="button"><%= link_to "Corrige toi", correction_game_path %></div>
   <div id="new" class="button"><%= link_to "Nouvelle Partie", new_game_path %></div>
 </div>
 
 
+<%# Partie Javascript que je n'arrive pas à mettre dans un fichier externe au HTML %>
 <script>
+  // import "jquery";
+  // import "jquery_ujs";
+  //= require_tree .
+
   // fonction pour enlever les accents
   function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
+
+  // Création d'un array pour lister les réponses fausses puis les corriger
+  let errorsArray = [];
 
   // Event Listener sur le Submit
   document.addEventListener("DOMContentLoaded", function() {
@@ -51,19 +63,22 @@
         let french = document.querySelector("#french" + i.toString()).innerHTML;
         let spanish = document.getElementById("spanish" + i.toString()).innerHTML;
 
+        // Si la réponse est juste
         if (input == spanish) {
-          // Si la réponse est juste
           divWord.style.backgroundColor = "green";
           point++; // Incrémentation
-        } else if (input == removeAccents(spanish)) {
+
           // Si la réponse est juste mais mauvais accent(s)
+        } else if (input == removeAccents(spanish)) {
           divWord.style.backgroundColor = "orange";
-          divWord.insertAdjacentHTML('beforeend', `${french} => ${spanish}`)
+          divWord.insertAdjacentHTML('beforeend', `Attention aux accents: ${spanish}`);
           point += 0.5; // Incrémentation
-        } else {
+
           // Si la réponse est fausse
+        } else {
           divWord.style.backgroundColor = "red";
-          divWord.insertAdjacentHTML('beforeend', `${french} => ${spanish}`)
+          divWord.insertAdjacentHTML('beforeend', `${spanish}`);
+          errorsArray.push(`${french}`);
         }
       };
       // On display le résultat
@@ -81,11 +96,35 @@
     });
   });
 
-  // Event Listener sur le Correction
+  // Event Listener sur le bouton Correction, à supprimer
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("correction").addEventListener("click", function(event) {
       event.preventDefault();
       console.log("Je suis ton père");
+      // Pour checker la tête de l'array dans la console
+      console.log(errorsArray);
+      fetch("/games/correction", {
+        method: "POST",
+        headers: {
+          "Content-Type": 'application/json',
+          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+        },
+        body: JSON.stringify({ errors_array: errorsArray }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          console.error('Erreur lors de la requête:', response.status, response.statusText);
+          throw new Error('Erreur lors de l\'envoi de l\'array au back-end');
+        }
+        return response.json(); // Vous pouvez ajuster cela en fonction du type de réponse attendu
+      })
+      .then(data => {
+        // Gérez la réponse du back-end si nécessaire
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Erreur: ', error);
+      });
     });
   });
 </script>
