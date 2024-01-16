@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "pages#home"
   resources :games, only: [:show, :new, :create]
-  
+  post "/games/correction", to: "games#correction", as: "correction_game"
+
   # get '*unmatched_route', to: 'pages#home'
 end

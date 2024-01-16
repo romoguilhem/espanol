@@ -16,7 +16,7 @@
   },
   {
     "french": "oiseau",
-    "spanish": "pajaro",
+    "spanish": "pájaro",
     "category": ["animaux"]
   },
   {
@@ -25,18 +25,8 @@
     "category": ["animaux"]
   },
   {
-    "french": "chat",
-    "spanish": "gato",
-    "category": ["animaux"]
-  },
-  {
     "french": "chatte",
     "spanish": "gata",
-    "category": ["animaux"]
-  },
-  {
-    "french": "chien",
-    "spanish": "perro",
     "category": ["animaux"]
   },
   {
@@ -110,8 +100,8 @@
     "category": ["cuisine"]
   },
   {
-    "french": "sel",
-    "spanish": "sal",
+    "french": "le sel",
+    "spanish": "la sal",
     "category": ["cuisine"]
   },
   {
@@ -122,7 +112,7 @@
   {
     "french": "poisson",
     "spanish": "pescado",
-    "category": ["animaux"]
+    "category": ["animaux", "cuisine"]
   },
   {
     "french": "chapeau",
@@ -136,7 +126,7 @@
   },
   {
     "french": "araignée",
-    "spanish": "blanca",
+    "spanish": "araña",
     "category": ["animaux"]
   },
   {
@@ -241,17 +231,17 @@
   },
   {
     "french": "boulangerie",
-    "spanish": "panaderia",
+    "spanish": "panadería",
     "category": ["divers"]
   },
   {
     "french": "boucherie",
-    "spanish": "carniceria",
+    "spanish": "carnicería",
     "category": ["divers"]
   },
   {
     "french": "pull",
-    "spanish": "sueter",
+    "spanish": "suéter",
     "category": ["vétements"]
   },
   {
@@ -266,7 +256,7 @@
   },
   {
     "french": "automne",
-    "spanish": "otono",
+    "spanish": "otoño",
     "category": ["temps"]
   },
   {
@@ -286,7 +276,7 @@
   },
   {
     "french": "mercredi",
-    "spanish": "miercoles",
+    "spanish": "miércoles",
     "category": ["temps"]
   },
   {
@@ -301,7 +291,7 @@
   },
   {
     "french": "samedi",
-    "spanish": "sabado",
+    "spanish": "sábado",
     "category": ["temps"]
   },
   {
@@ -371,7 +361,17 @@
   },
   {
     "french": "midi",
-    "spanish": "mediodia",
+    "spanish": "mediodía",
+    "category": ["temps"]
+  },
+  {
+    "french": "minuit",
+    "spanish": "medianoche",
+    "category": ["temps"]
+  },
+  {
+    "french": "jour",
+    "spanish": "día",
     "category": ["temps"]
   },
   {
@@ -437,6 +437,81 @@
   {
     "french": "tard",
     "spanish": "tarde",
+    "category": ["temps"]
+  },
+  {
+    "french": "combien",
+    "spanish": "cuánto",
+    "category": ["poser des questions"]
+  },
+  {
+    "french": "cousin",
+    "spanish": "primo",
+    "category": ["famille"]
+  },
+  {
+    "french": "comment",
+    "spanish": "cómo",
+    "category": ["poser des questions"]
+  },
+  {
+    "french": "agenda",
+    "spanish": "diario",
+    "category": ["quotidien"]
+  },
+  {
+    "french": "homme",
+    "spanish": "hombre",
+    "category": ["famille"]
+  },
+  {
+    "french": "femme",
+    "spanish": "mujer",
+    "category": ["famille"]
+  },
+  {
+    "french": "être",
+    "spanish": ["ser", "estar"],
+    "category": ["verbes"]
+  },
+  {
+    "french": "oncle",
+    "spanish": "tío",
+    "category": ["famille"]
+  },
+  {
+    "french": "tante",
+    "spanish": "tía",
+    "category": ["famille"]
+  },
+  {
+    "french": "tente",
+    "spanish": "carpa",
+    "category": ["divers"]
+  },
+  {
+    "french": "journal",
+    "spanish": "periódico",
+    "category": ["quotidien"]
+  },
+  {
+    "french": "vous",
+    "spanish": ["usted", "ustedes"],
+    "category": ["Poser des questions"]
+  },
+  {
+    "french": "comment",
+    "spanish": ["cómo"],
+    "category": ["Poser des questions"]
+  },
+  {
+    "french": "qui",
+    "spanish": ["quien", "quienes"],
+    "category": ["Poser des questions"]
+  },
+  {
+    "french": "calendrier",
+    "spanish": "calendario",
     "category": ["temps"]
   }
 ]}
