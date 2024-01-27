@@ -513,5 +513,10 @@
     "french": "calendrier",
     "spanish": "calendario",
     "category": ["temps"]
+  },
+  {
+    "french": "une saison",
+    "spanish": "una estación",
+    "category": ["temps"]
   }
 ]}

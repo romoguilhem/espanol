@@ -2,6 +2,7 @@
 
 <% if @translations == "Youpi" %>
   <p>HEHEHEHEHEHEHE ca maaaarrche</p>
+  <%= @errors_array %>
 <% else %>
   <% n = 0 %>
   <form>
@@ -34,16 +35,12 @@
 
 <%# Partie Javascript que je n'arrive pas à mettre dans un fichier externe au HTML %>
 <script>
-  // import "jquery";
-  // import "jquery_ujs";
-  //= require_tree .
-
   // fonction pour enlever les accents
   function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
-  // Création d'un array pour lister les réponses fausses puis les corriger
+  // Création d'un array pour lister les réponses fausses
   let errorsArray = [];
 
   // Event Listener sur le Submit
@@ -53,6 +50,7 @@
 
       // Taille de la liste
       let size = document.querySelector("#size").innerHTML;
+
       // On va compter les bonnes réponses
       let point = 0;
 
@@ -68,13 +66,13 @@
           divWord.style.backgroundColor = "green";
           point++; // Incrémentation
 
-          // Si la réponse est juste mais mauvais accent(s)
+        // Si la réponse est juste mais mauvais accent(s)
         } else if (input == removeAccents(spanish)) {
           divWord.style.backgroundColor = "orange";
           divWord.insertAdjacentHTML('beforeend', `Attention aux accents: ${spanish}`);
           point += 0.5; // Incrémentation
 
-          // Si la réponse est fausse
+        // Si la réponse est fausse
         } else {
           divWord.style.backgroundColor = "red";
           divWord.insertAdjacentHTML('beforeend', `${spanish}`);
@@ -96,7 +94,7 @@
     });
   });
 
-  // Event Listener sur le bouton Correction, à supprimer
+  // Event Listener sur le bouton Correction
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("correction").addEventListener("click", function(event) {
       event.preventDefault();
