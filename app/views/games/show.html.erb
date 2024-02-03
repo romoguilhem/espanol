@@ -1,34 +1,29 @@
 <h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
 
-<% if @translations == "Youpi" %>
-  <p>HEHEHEHEHEHEHE ca maaaarrche</p>
-  <%= @errors_array %>
-<% else %>
-  <% n = 0 %>
-  <form>
-    <div id="list">
-      <% @translations.each do |hash| %>
-        <% n += 1 %>
-        <div id="word<%= n %>" style="display: flex;">
-          <label id="french<%= n %>"><%= hash["french"] %></label>
-          <input type="text" id="input<%= n %>"><br><br>
-          <%# Trick pour récupérer la traduction avec le js %>
-          <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
-        </div>
-      <% end %>
-    </div>
+<% n = 0 %>
+<form>
+  <div id="list">
+    <% @translation_hashes.each do |hash| %>
+      <% n += 1 %>
+      <div id="word<%= n %>" style="display: flex;">
+        <label id="french<%= n %>"><%= hash["french"] %></label>
+        <input type="text" id="input<%= n %>"><br><br>
+        <%# Trick pour récupérer la traduction avec le js %>
+        <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
+      </div>
+    <% end %>
+  </div>
 
-    <%# Trick pour récupérer la taille n de la liste avec le js %>
-    <div id="size" style="display: none;"><%= n %></div>
+  <%# Trick pour récupérer la taille n de la liste avec le js %>
+  <div id="size" style="display: none;"><%= n %></div>
 
-    <input type="submit" value="Submit" class="button">
-  </form>
-<% end %>
+  <input type="submit" value="Submit" class="button">
+</form>
 
 <div id="score"></div>
 
 <div id="buttons">
-  <div id="correction" class="button"><%= link_to "Corrige toi", correction_game_path %></div>
+  <div id="correction" class="button"><%= link_to "Corrige toi", correction_game_path(@game), method: :post, remote: true %></div>
   <div id="new" class="button"><%= link_to "Nouvelle Partie", new_game_path %></div>
 </div>
 
@@ -62,15 +57,15 @@
         let spanish = document.getElementById("spanish" + i.toString()).innerHTML;
 
         // Si la réponse est juste
-        if (input == spanish) {
+        if (input.toLowerCase() == spanish) {
           divWord.style.backgroundColor = "green";
           point++; // Incrémentation
 
         // Si la réponse est juste mais mauvais accent(s)
-        } else if (input == removeAccents(spanish)) {
+        } else if (input.toLowerCase() == removeAccents(spanish)) {
           divWord.style.backgroundColor = "orange";
           divWord.insertAdjacentHTML('beforeend', `Attention aux accents: ${spanish}`);
-          point += 0.5; // Incrémentation
+          point++; // Incrémentation
 
         // Si la réponse est fausse
         } else {
@@ -89,8 +84,6 @@
       } else {
         divScore.innerHTML = `Parfait ${point} / ${size} ! <br>Mais nous ne t'accordons toujours pas le rang de maître.`;
       };
-
-
     });
   });
 
@@ -114,11 +107,15 @@
           console.error('Erreur lors de la requête:', response.status, response.statusText);
           throw new Error('Erreur lors de l\'envoi de l\'array au back-end');
         }
-        return response.json(); // Vous pouvez ajuster cela en fonction du type de réponse attendu
+        // On récupère l'url voulu avec la réponse du back-end
+        console.log(response.url);
+        window.location.href = response.url;
       })
       .then(data => {
-        // Gérez la réponse du back-end si nécessaire
-        console.log(data);
+        // Ici la partie data ne sert à rien car rien n'est retourné sur la page actuelle, on part vers une nouvelle show avec le bouton correction.
+
+        // Controle de la data
+        // console.log(data);
       })
       .catch(error => {
         console.error('Erreur: ', error);
