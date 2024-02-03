@@ -16,25 +16,40 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @errors_array = params[:array]
     
     if @errors_array.nil?
-      @translations = database.sample(@game.number_of_words)
+      # Cas d'une nouvelle game
+      @translation_hashes = database.sample(@game.number_of_words)
     else
+      # Cas d'une correction
+      @translation_hashes = []
+      
       # On va chercher dans la database les errors de la précédente game
-      @translations = "Youpi"
+      @errors_array.each do |word|
+        @translation_hashes << database.find { |hash| hash["french"] == word }
+      end
     end
   end
 
   def correction
     # On récupère l'errorsArray
-    @errors_array = JSON.parse(request.body.read)['errors_array']
-    # render json: { message: 'Traitement réussi', data: @errors_array.count }
-    @new_game = Game.new(number_of_words: @errors_array.count)
+    errors_array = JSON.parse(request.body.read)['errors_array']
+
+    # On check les bugs
+    # render json: { message: 'Traitement réussi', data: errors_array }
+    # Rails.logger.debug("Response: #{response.body}")
+    
+    # On lance la game de correction
+    @new_game = Game.new(number_of_words: errors_array.count)
+
+    # On stocke les erreurs pour la session
+    # session.now[:array] = errors_array
 
     if @new_game.save
-      redirect_to game_path(@new_game)
+      redirect_to game_path(@new_game, array: errors_array)
     else
-      redirect_to root_path
+      render :new
     end
   end
 
