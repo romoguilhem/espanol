@@ -1,501 +1,501 @@
 { "translations": [
   {
-    "french": "chat",
-    "spanish": "gato",
+    "french": ["chat"],
+    "spanish": ["gato"],
     "category": ["animaux"]
   },
   {
-    "french": "chien",
-    "spanish": "perro",
+    "french": ["chien"],
+    "spanish": ["perro"],
     "category": ["animaux"]
   },
   {
-    "french": "lapin",
-    "spanish": "conejo",
+    "french": ["lapin"],
+    "spanish": ["conejo"],
     "category": ["animaux"]
   },
   {
-    "french": "oiseau",
-    "spanish": "pájaro",
+    "french": ["oiseau"],
+    "spanish": ["pájaro"],
     "category": ["animaux"]
   },
   {
-    "french": "souris",
-    "spanish": "ratón",
+    "french": ["souris"],
+    "spanish": ["ratón"],
     "category": ["animaux"]
   },
   {
-    "french": "chatte",
-    "spanish": "gata",
+    "french": ["chatte"],
+    "spanish": ["gata"],
     "category": ["animaux"]
   },
   {
-    "french": "chienne",
-    "spanish": "perra",
+    "french": ["chienne"],
+    "spanish": ["perra"],
     "category": ["animaux"]
   },
   {
-    "french": "éléphant",
-    "spanish": "elefante",
+    "french": ["éléphant"],
+    "spanish": ["elefante"],
     "category": ["animaux"]
   },
   {
-    "french": "crabe",
-    "spanish": "cangrejo",
+    "french": ["crabe"],
+    "spanish": ["cangrejo"],
     "category": ["animaux"]
   },
   {
-    "french": "canard",
-    "spanish": "pato",
+    "french": ["canard"],
+    "spanish": ["pato"],
     "category": ["animaux"]
   },
   {
-    "french": "petit déjeuner",
-    "spanish": "desayuno",
+    "french": ["petit déjeuner"],
+    "spanish": ["desayuno"],
     "category": ["cuisine"]
   },
   {
-    "french": "déjeuner",
-    "spanish": "almuerzo",
+    "french": ["déjeuner"],
+    "spanish": ["almuerzo"],
     "category": ["cuisine"]
   },
   {
-    "french": "manteau",
-    "spanish": "abrigo",
+    "french": ["manteau"],
+    "spanish": ["abrigo"],
     "category": ["vétements"]
   },
   {
-    "french": "les vétements",
-    "spanish": "la ropa",
+    "french": ["les vétements"],
+    "spanish": ["la ropa"],
     "category": ["vétements"]
   },
   {
-    "french": "jupe",
-    "spanish": "falda",
+    "french": ["jupe"],
+    "spanish": ["falda"],
     "category": ["vétements"]
   },
   {
-    "french": "lunettes",
-    "spanish": "gafas",
+    "french": ["lunettes"],
+    "spanish": ["gafas"],
     "category": ["vétements"]
   },
   {
-    "french": "costume",
-    "spanish": "traje",
+    "french": ["costume"],
+    "spanish": ["traje"],
     "category": ["vétements"]
   },
   {
-    "french": "chaussettes",
-    "spanish": "calcetines",
+    "french": ["chaussettes"],
+    "spanish": ["calcetines"],
     "category": ["vétements"]
   },
   {
-    "french": "robe",
-    "spanish": "vestido",
+    "french": ["robe"],
+    "spanish": ["vestido"],
     "category": ["vétements"]
   },
   {
-    "french": "légumes",
-    "spanish": "verduras",
+    "french": ["légumes"],
+    "spanish": ["verduras"],
     "category": ["cuisine"]
   },
   {
-    "french": "le sel",
-    "spanish": "la sal",
+    "french": ["le sel"],
+    "spanish": ["la sal"],
     "category": ["cuisine"]
   },
   {
-    "french": "lait",
-    "spanish": "leche",
+    "french": ["le lait"],
+    "spanish": ["la leche"],
     "category": ["cuisine"]
   },
   {
-    "french": "poisson",
-    "spanish": "pescado",
+    "french": ["poisson"],
+    "spanish": ["pescado"],
     "category": ["animaux", "cuisine"]
   },
   {
-    "french": "chapeau",
-    "spanish": "sombrero",
+    "french": ["chapeau"],
+    "spanish": ["sombrero"],
     "category": ["vétements"]
   },
   {
-    "french": "avoir",
-    "spanish": "tener",
+    "french": ["avoir"],
+    "spanish": ["tener"],
     "category": ["verbes"]
   },
   {
-    "french": "araignée",
-    "spanish": "araña",
+    "french": ["araignée"],
+    "spanish": ["araña"],
     "category": ["animaux"]
   },
   {
-    "french": "blanc",
-    "spanish": "blanco",
+    "french": ["blanc"],
+    "spanish": ["blanco"],
     "category": ["couleur"]
   },
   {
-    "french": "noir",
-    "spanish": "negro",
+    "french": ["noir"],
+    "spanish": ["negro"],
     "category": ["couleur"]
   },
   {
-    "french": "jaune",
-    "spanish": "amarillo",
+    "french": ["jaune"],
+    "spanish": ["amarillo"],
     "category": ["couleur"]
   },
   {
-    "french": "gris",
-    "spanish": "gris",
+    "french": ["gris"],
+    "spanish": ["gris"],
     "category": ["couleur"]
   },
   {
-    "french": "orange",
-    "spanish": "naranja",
+    "french": ["orange"],
+    "spanish": ["naranja"],
     "category": ["couleur"]
   },
   {
-    "french": "bleu",
-    "spanish": "azul",
+    "french": ["bleu"],
+    "spanish": ["azul"],
     "category": ["couleur"]
   },
   {
-    "french": "sucre",
-    "spanish": "azucar",
+    "french": ["sucre"],
+    "spanish": ["azucar"],
     "category": ["couleur"]
   },
   {
-    "french": "marcher",
+    "french": ["marcher"],
     "spanish": ["caminar", "andar"],
     "category": ["couleur"]
   },
   {
-    "french": "cuisiner",
-    "spanish": "cocinar",
+    "french": ["cuisiner"],
+    "spanish": ["cocinar"],
     "category": ["cuisine", "verbes"]
   },
   {
-    "french": "poulet",
-    "spanish": "pollo",
+    "french": ["poulet"],
+    "spanish": ["pollo"],
     "category": ["cuisine", "animaux"]
   },
   {
-    "french": "chaussure",
-    "spanish": "zapato",
+    "french": ["chaussure"],
+    "spanish": ["zapato"],
     "category": ["vétements"]
   },
   {
-    "french": "rouge",
-    "spanish": "rojo",
+    "french": ["rouge"],
+    "spanish": ["rojo"],
     "category": ["couleur"]
   },
   {
-    "french": "lire",
-    "spanish": "leer",
+    "french": ["lire"],
+    "spanish": ["leer"],
     "category": ["verbes"]
   },
   {
-    "french": "oignon",
-    "spanish": "cebolla",
+    "french": ["oignon"],
+    "spanish": ["cebolla"],
     "category": ["cuisine"]
   },
   {
-    "french": "taureau",
-    "spanish": "toro",
+    "french": ["taureau"],
+    "spanish": ["toro"],
     "category": ["animaux"]
   },
   {
-    "french": "manger",
-    "spanish": "comer",
+    "french": ["manger"],
+    "spanish": ["comer"],
     "category": ["cuisine", "verbes"]
   },
   {
-    "french": "libro",
-    "spanish": "livre",
+    "french": ["libro"],
+    "spanish": ["livre"],
     "category": ["divers"]
   },
   {
-    "french": "boire",
-    "spanish": "beber",
+    "french": ["boire"],
+    "spanish": ["beber"],
     "category": ["cuisine", "verbes"]
   },
   {
-    "french": "jus",
-    "spanish": "jugo",
+    "french": ["jus"],
+    "spanish": ["jugo"],
     "category": ["cuisine"]
   },
   {
-    "french": "jeu",
-    "spanish": "juego",
+    "french": ["jeu"],
+    "spanish": ["juego"],
     "category": ["divers"]
   },
   {
-    "french": "boulangerie",
-    "spanish": "panadería",
+    "french": ["boulangerie"],
+    "spanish": ["panadería"],
     "category": ["divers"]
   },
   {
-    "french": "boucherie",
-    "spanish": "carnicería",
+    "french": ["boucherie"],
+    "spanish": ["carnicería"],
     "category": ["divers"]
   },
   {
-    "french": "pull",
-    "spanish": "suéter",
+    "french": ["pull"],
+    "spanish": ["suéter"],
     "category": ["vétements"]
   },
   {
-    "french": "été",
-    "spanish": "verano",
+    "french": ["été"],
+    "spanish": ["verano"],
     "category": ["temps"]
   },
   {
-    "french": "hiver",
-    "spanish": "invierno",
+    "french": ["hiver"],
+    "spanish": ["invierno"],
     "category": ["temps"]
   },
   {
-    "french": "automne",
-    "spanish": "otoño",
+    "french": ["automne"],
+    "spanish": ["otoño"],
     "category": ["temps"]
   },
   {
-    "french": "printemps",
-    "spanish": "primavera",
+    "french": ["printemps"],
+    "spanish": ["primavera"],
     "category": ["temps"]
   },
   {
-    "french": "lundi",
-    "spanish": "lunes",
+    "french": ["lundi"],
+    "spanish": ["lunes"],
     "category": ["temps"]
   },
   {
-    "french": "mardi",
-    "spanish": "martes",
+    "french": ["mardi"],
+    "spanish": ["martes"],
     "category": ["temps"]
   },
   {
-    "french": "mercredi",
-    "spanish": "miércoles",
+    "french": ["mercredi"],
+    "spanish": ["miércoles"],
     "category": ["temps"]
   },
   {
-    "french": "jeudi",
-    "spanish": "jueves",
+    "french": ["jeudi"],
+    "spanish": ["jueves"],
     "category": ["temps"]
   },
   {
-    "french": "vendredi",
-    "spanish": "viernes",
+    "french": ["vendredi"],
+    "spanish": ["viernes"],
     "category": ["temps"]
   },
   {
-    "french": "samedi",
-    "spanish": "sábado",
+    "french": ["samedi"],
+    "spanish": ["sábado"],
     "category": ["temps"]
   },
   {
-    "french": "dimanche",
-    "spanish": "domingo",
+    "french": ["dimanche"],
+    "spanish": ["domingo"],
     "category": ["temps"]
   },
   {
-    "french": "janvier",
-    "spanish": "enero",
+    "french": ["janvier"],
+    "spanish": ["enero"],
     "category": ["temps"]
   },
   {
-    "french": "février",
-    "spanish": "febrero",
+    "french": ["février"],
+    "spanish": ["febrero"],
     "category": ["temps"]
   },
   {
-    "french": "mars",
-    "spanish": "marzo",
+    "french": ["mars"],
+    "spanish": ["marzo"],
     "category": ["temps"]
   },
   {
-    "french": "avril",
-    "spanish": "abril",
+    "french": ["avril"],
+    "spanish": ["abril"],
     "category": ["temps"]
   },
   {
-    "french": "mai",
-    "spanish": "mayo",
+    "french": ["mai"],
+    "spanish": ["mayo"],
     "category": ["temps"]
   },
   {
-    "french": "juin",
-    "spanish": "junio",
+    "french": ["juin"],
+    "spanish": ["junio"],
     "category": ["temps"]
   },
   {
-    "french": "juillet",
-    "spanish": "julio",
+    "french": ["juillet"],
+    "spanish": ["julio"],
     "category": ["temps"]
   },
   {
-    "french": "aout",
-    "spanish": "agosto",
+    "french": ["aout"],
+    "spanish": ["agosto"],
     "category": ["temps"]
   },
   {
-    "french": "septembre",
-    "spanish": "septiembre",
+    "french": ["septembre"],
+    "spanish": ["septiembre"],
     "category": ["temps"]
   },
   {
-    "french": "octobre",
-    "spanish": "octubre",
+    "french": ["octobre"],
+    "spanish": ["octubre"],
     "category": ["temps"]
   },
   {
-    "french": "novembre",
-    "spanish": "noviembre",
+    "french": ["novembre"],
+    "spanish": ["noviembre"],
     "category": ["temps"]
   },
   {
-    "french": "décembre",
-    "spanish": "diciembre",
+    "french": ["décembre"],
+    "spanish": ["diciembre"],
     "category": ["temps"]
   },
   {
-    "french": "midi",
-    "spanish": "mediodía",
+    "french": ["midi"],
+    "spanish": ["mediodía"],
     "category": ["temps"]
   },
   {
-    "french": "minuit",
-    "spanish": "medianoche",
+    "french": ["minuit"],
+    "spanish": ["medianoche"],
     "category": ["temps"]
   },
   {
-    "french": "jour",
-    "spanish": "día",
+    "french": ["jour"],
+    "spanish": ["día"],
     "category": ["temps"]
   },
   {
-    "french": "rendez-vous",
-    "spanish": "cita",
+    "french": ["rendez-vous"],
+    "spanish": ["cita"],
     "category": ["divers"]
   },
   {
-    "french": "anniversaire",
-    "spanish": "cumpleaños",
+    "french": ["anniversaire"],
+    "spanish": ["cumpleaños"],
     "category": ["temps"]
   },
   {
-    "french": "date",
-    "spanish": "fecha",
+    "french": ["date"],
+    "spanish": ["fecha"],
     "category": ["temps"]
   },
   {
-    "french": "aujourd'hui",
-    "spanish": "hoy",
+    "french": ["aujourd'hui"],
+    "spanish": ["hoy"],
     "category": ["temps"]
   },
   {
-    "french": "l'aube",
-    "spanish": "la madrugada",
+    "french": ["l'aube"],
+    "spanish": ["la madrugada"],
     "category": ["temps"]
   },
   {
     "french": ["demain", "matin"],
-    "spanish": "mañana",
+    "spanish": ["mañana"],
     "category": ["temps"]
   },
   {
-    "french": "vacances",
-    "spanish": "vacaciones",
+    "french": ["vacances"],
+    "spanish": ["vacaciones"],
     "category": ["temps"]
   },
   {
-    "french": "hier",
-    "spanish": "ayer",
+    "french": ["hier"],
+    "spanish": ["ayer"],
     "category": ["temps"]
   },
   {
-    "french": "hier soir",
-    "spanish": "anoche",
+    "french": ["hier soir"],
+    "spanish": ["anoche"],
     "category": ["temps"]
   },
   {
-    "french": "avec",
-    "spanish": "con",
+    "french": ["avec"],
+    "spanish": ["con"],
     "category": ["conjonction"]
   },
   {
-    "french": "et",
+    "french": ["et"],
     "spanish": ["y", "e"],
     "category": ["conjonction"]
   },
   {
-    "french": "mais",
-    "spanish": "pero",
+    "french": ["mais"],
+    "spanish": ["pero"],
     "category": ["conjonction"]
   },
   {
-    "french": "tard",
-    "spanish": "tarde",
+    "french": ["tard"],
+    "spanish": ["tarde"],
     "category": ["temps"]
   },
   {
-    "french": "combien",
-    "spanish": "cuánto",
+    "french": ["combien"],
+    "spanish": ["cuánto"],
     "category": ["poser des questions"]
   },
   {
-    "french": "cousin",
-    "spanish": "primo",
+    "french": ["cousin"],
+    "spanish": ["primo"],
     "category": ["famille"]
   },
   {
-    "french": "comment",
-    "spanish": "cómo",
+    "french": ["comment"],
+    "spanish": ["cómo"],
     "category": ["poser des questions"]
   },
   {
-    "french": "agenda",
-    "spanish": "diario",
+    "french": ["agenda"],
+    "spanish": ["diario"],
     "category": ["quotidien"]
   },
   {
-    "french": "homme",
-    "spanish": "hombre",
+    "french": ["homme"],
+    "spanish": ["hombre"],
     "category": ["famille"]
   },
   {
-    "french": "femme",
-    "spanish": "mujer",
+    "french": ["femme"],
+    "spanish": ["mujer"],
     "category": ["famille"]
   },
   {
-    "french": "être",
+    "french": ["être"],
     "spanish": ["ser", "estar"],
     "category": ["verbes"]
   },
   {
-    "french": "oncle",
-    "spanish": "tío",
+    "french": ["oncle"],
+    "spanish": ["tío"],
     "category": ["famille"]
   },
   {
-    "french": "tante",
-    "spanish": "tía",
+    "french": ["tante"],
+    "spanish": ["tía"],
     "category": ["famille"]
   },
   {
-    "french": "tente",
-    "spanish": "carpa",
+    "french": ["tente"],
+    "spanish": ["carpa"],
     "category": ["divers"]
   },
   {
-    "french": "journal",
-    "spanish": "periódico",
+    "french": ["journal"],
+    "spanish": ["periódico"],
     "category": ["quotidien"]
   },
   {
-    "french": "vous",
+    "french": ["vous"],
     "spanish": ["usted", "ustedes"],
     "category": ["Poser des questions"]
   },
@@ -505,18 +505,23 @@
     "category": ["Poser des questions"]
   },
   {
-    "french": "qui",
-    "spanish": ["quien", "quienes"],
+    "french": ["qui"],
+    "spanish": ["quién", "quienes"],
     "category": ["Poser des questions"]
   },
   {
-    "french": "calendrier",
-    "spanish": "calendario",
+    "french": ["calendrier"],
+    "spanish": ["calendario"],
     "category": ["temps"]
   },
   {
-    "french": "une saison",
-    "spanish": "una estación",
+    "french": ["saison"],
+    "spanish": ["estación", "temporada"],
+    "category": ["temps"]
+  },
+  {
+    "french": ["parfois"],
+    "spanish": ["a veces"],
     "category": ["temps"]
   }
 ]}

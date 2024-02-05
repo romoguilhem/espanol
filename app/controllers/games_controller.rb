@@ -27,7 +27,7 @@ class GamesController < ApplicationController
       
       # On va chercher dans la database les errors de la précédente game
       @errors_array.each do |word|
-        @translation_hashes << database.find { |hash| hash["french"] == word }
+        @translation_hashes << database.find { |hash| hash["french"].include?(word) }
       end
     end
   end
