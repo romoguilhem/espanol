@@ -85,8 +85,8 @@
     "category": ["vétements"]
   },
   {
-    "french": ["chaussettes"],
-    "spanish": ["calcetines"],
+    "french": ["les chaussettes"],
+    "spanish": ["los calcetines"],
     "category": ["vétements"]
   },
   {
@@ -132,42 +132,42 @@
   {
     "french": ["blanc"],
     "spanish": ["blanco"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["noir"],
     "spanish": ["negro"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["jaune"],
     "spanish": ["amarillo"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["gris"],
     "spanish": ["gris"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["orange"],
     "spanish": ["naranja"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["bleu"],
     "spanish": ["azul"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["sucre"],
     "spanish": ["azucar"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["marcher"],
     "spanish": ["caminar", "andar"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["cuisiner"],
@@ -187,7 +187,7 @@
   {
     "french": ["rouge"],
     "spanish": ["rojo"],
-    "category": ["couleur"]
+    "category": ["couleurs"]
   },
   {
     "french": ["lire"],
@@ -523,5 +523,10 @@
     "french": ["parfois"],
     "spanish": ["a veces"],
     "category": ["temps"]
+  },
+  {
+    "french": ["prendre"],
+    "spanish": ["tomar"],
+    "category": ["verbe"]
   }
 ]}

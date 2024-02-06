@@ -1,0 +1,22 @@
+/* General button look */
+
+.button {
+  background-color: aquamarine;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  max-width: fit-content;
+}
+
+.button:hover {
+  opacity: 1;
+  color: grey;
+}
+
+#buttons {
+  display: flex;
+}
