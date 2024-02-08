@@ -121,7 +121,7 @@
   },
   {
     "french": ["avoir"],
-    "spanish": ["tener"],
+    "spanish": ["tener", "haber"],
     "category": ["verbes"]
   },
   {
@@ -210,8 +210,8 @@
     "category": ["cuisine", "verbes"]
   },
   {
-    "french": ["libro"],
-    "spanish": ["livre"],
+    "french": ["livre"],
+    "spanish": ["libro"],
     "category": ["divers"]
   },
   {
@@ -500,7 +500,7 @@
     "category": ["Poser des questions"]
   },
   {
-    "french": "comment",
+    "french": ["comment"],
     "spanish": ["cómo"],
     "category": ["Poser des questions"]
   },
@@ -527,6 +527,56 @@
   {
     "french": ["prendre"],
     "spanish": ["tomar"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["selon"],
+    "spanish": ["según"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["pendant"],
+    "spanish": ["durante"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["le"],
+    "spanish": ["el", "lo"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["au"],
+    "spanish": ["al"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["sur"],
+    "spanish": ["sobre"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["famille"],
+    "spanish": ["familia"],
+    "category": ["famille"]
+  },
+  {
+    "french": ["pourquoi"],
+    "spanish": ["por qué"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["écouter"],
+    "spanish": ["escuchar"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["entendre"],
+    "spanish": ["oír"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["vouloir"],
+    "spanish": ["querer"],
     "category": ["verbe"]
   }
 ]}

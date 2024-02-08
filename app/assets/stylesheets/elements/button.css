@@ -6,17 +6,29 @@
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+  font-weight: bolder;
+  opacity: 1;
   transition: opacity 0.3s ease;
   max-width: fit-content;
 }
 
 .button:hover {
-  opacity: 1;
+  opacity: 0.6;
   color: grey;
 }
 
 #buttons {
   display: flex;
 }
+
+#submit-buttons {
+  display: flex;
+}
+
+#comenzar-button {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+

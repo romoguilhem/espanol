@@ -1,4 +1,24 @@
 /* All imports */
-@import "button.css";
+@import "elements/button.css";
+@import "elements/navbar.css";
+@import "elements/new.css";
+@import "elements/show.css";
 
 /* And some general css for the app */
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-container {
+  margin-top: 10vh;
+  max-width: fit-content;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}

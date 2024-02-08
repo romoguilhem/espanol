@@ -1,0 +1,8 @@
+#new-container {
+  text-align: center;
+  margin-top: 20vh;
+}
+
+h2 > #new-container {
+  margin-bottom: 30px;
+}

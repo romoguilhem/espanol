@@ -1,0 +1,13 @@
+#navbar {
+  justify-content: space-around;
+  background-color: bisque;
+  padding-bottom: 10px;
+  border: 1px solid #4A4A4A;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+#navbar-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}

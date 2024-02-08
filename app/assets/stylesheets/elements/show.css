@@ -1,0 +1,37 @@
+#show-container {
+  text-align: center;
+  align-items: center;
+}
+
+form {
+  max-width: 75vh;
+}
+
+#list {
+  display: flex;
+  flex-direction: column; /* Aligner les éléments verticalement */
+}
+
+#list > div {
+  display: flex;
+  align-items: center; /* Centrer verticalement les éléments */
+  margin-bottom: 10px; /* Espacement entre les éléments */
+  justify-content: space-between;
+}
+
+#list input[type="text"] {
+  width: 200px; /* Largeur fixe pour les inputs */
+  margin-left: 10px; /* Espacement entre les inputs et les labels */
+  margin-right: 10px; /* Espacement entre les inputs et la traduction */
+  text-align: center;
+}
+
+#list label {
+  flex: 0.5; /* Permet aux labels de prendre autant d'espace que possible */
+  margin-right: 10px; /* Espacement entre les labels et les inputs */
+}
+
+#score {
+  text-align: left;
+}
+

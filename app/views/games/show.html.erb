@@ -1,36 +1,43 @@
-<div class = "button"><%= link_to "Casa", root_path %></div>
+<div id="navbar">
+  <h1>🚀 Vamos a practicar nuestro espanol 🚀</h1>
 
-<% if @game.number_of_words == 1 %>
-  <h2>Traduis le mot suivant:</h2>
-<% else %>
-  <h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
-<% end %>
-
-<% n = 0 %>
-<form>
-  <div id="list">
-    <% @translation_hashes.each do |hash| %>
-      <% n += 1 %>
-      <div id="word<%= n %>" style="display: flex;">
-        <label id="french<%= n %>"><%= hash["french"].sample %></label>
-        <input type="text" id="input<%= n %>" autocomplete="off"><br><br>
-        <%# Trick pour récupérer la traduction avec le js %>
-        <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
-      </div>
-    <% end %>
+  <div id="navbar-buttons">
+    <div class = "button"><%= link_to "Casa", root_path %></div>
+    <div id="new" class="button"><%= link_to "Nouvelle Partie", new_game_path %></div>
   </div>
+</div>
 
-  <%# Trick pour récupérer la taille n de la liste avec le js %>
-  <div id="size" style="display: none;"><%= n %></div>
+<div id="show-container">
+  <% if @game.number_of_words == 1 %>
+    <h2>Traduis le mot suivant:</h2>
+  <% else %>
+    <h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
+  <% end %>
 
-  <input type="submit" value="Submit" class="button">
-</form>
+  <% n = 0 %>
+  <form>
+    <div id="list">
+      <% @translation_hashes.each do |hash| %>
+        <% n += 1 %>
+        <div id="word<%= n %>" style="display: flex; justify-content: space-around; ">
+          <label id="french<%= n %>"><%= hash["french"].sample %></label>
+          <input type="text" id="input<%= n %>" autocomplete="off"><br><br>
+          <%# Trick pour récupérer la traduction avec le js %>
+          <div id="spanish<%= n %>" style="display: none; text-align: center; flex: 0.5;"><%= hash["spanish"] %></div>
+        </div>
+      <% end %>
+    </div>
 
-<div id="score"></div>
+    <%# Trick pour récupérer la taille n de la liste avec le js %>
+    <div id="size" style="display: none;"><%= n %></div>
 
-<div id="buttons">
-  <div id="correction" class="button"><%= link_to "Corrige toi", correction_game_path(@game), method: :post, remote: true %></div>
-  <div id="new" class="button"><%= link_to "Nouvelle Partie", new_game_path %></div>
+    <div id="submit-buttons">
+      <input id="submit" type="submit" value="Submit" class="button">
+      <div id="correction" class="button" style="display: none;" ><%= link_to "Corrige toi", correction_game_path(@game), method: :post, remote: true %></div>
+    </div>
+  </form>
+
+  <div id="score"></div>
 </div>
 
 
@@ -91,7 +98,7 @@
         // Si la réponse est juste mais mauvais accent(s)
         } else if (isAlmostCorrect(input, spanish)) {
           divWord.style.backgroundColor = "orange";
-          divWord.insertAdjacentHTML('beforeend', `Attention aux accents: ${spanish}`);
+          divWord.insertAdjacentHTML('beforeend', `${spanish}`);
           point++; // Incrémentation
 
         // Si la réponse est fausse
@@ -102,16 +109,16 @@
           if (spanish.length == 1) {
             divWord.insertAdjacentHTML('beforeend', `${spanish[0]}`);
           } else if (spanish.length == 2) {
-            divWord.insertAdjacentHTML('beforeend', `${spanish[0]} ou ${spanish[1]}`);
+            divWord.insertAdjacentHTML('beforeend', `${spanish[0]} o ${spanish[1]}`);
           } else if (spanish.length == 3) {
-            divWord.insertAdjacentHTML('beforeend', `${spanish[0]} ou ${spanish[1]} ou ${spanish[2]}`);
+            divWord.insertAdjacentHTML('beforeend', `${spanish[0]} o ${spanish[1]} o ${spanish[2]}`);
           }
 
           // Et on enregistre la mauvaise réponse pour correction
           errorsArray.push(`${french}`);
         }
       }
-      console.log("là conno 5");
+
       // On display le résultat
       let divScore = document.getElementById("score");
 
@@ -122,6 +129,12 @@
       } else {
         divScore.innerHTML = `Parfait ${point} / ${size} ! <br>Mais nous ne t'accordons toujours pas le rang de maître.`;
       };
+
+      // On switch les boutons Submit et Correction
+      let submitButton = getElementById("submit");
+      let correctionButton = getElementById("correction");
+      submitButton.style.display = "none";
+      correctionButton.style.display = "block";
     });
   });
 
