@@ -23,6 +23,7 @@
 
 #submit-buttons {
   display: flex;
+  justify-content: center;
 }
 
 #comenzar-button {
