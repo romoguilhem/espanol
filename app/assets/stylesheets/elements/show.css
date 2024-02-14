@@ -1,15 +1,11 @@
 #show-container {
   align-items: right;
-}
-
-form {
-  max-width: 75vh;
+  margin: 10px;
 }
 
 #list {
   display: flex;
   flex-direction: column; /* Aligner les éléments verticalement */
-  align-items: right;
   justify-content: space-between;
 }
 
@@ -17,11 +13,11 @@ form {
   display: flex;
   align-items: center; /* Centrer verticalement les éléments */
   margin-bottom: 10px; /* Espacement entre les éléments */
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #list input[type="text"] {
-  width: 35%; /* Largeur fixe pour les inputs */
+  width: 200px; /* Largeur fixe pour les inputs */
   text-align: center;
 }
 
@@ -32,6 +28,5 @@ form {
 
 #score {
   text-align: left;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 20px;
 }

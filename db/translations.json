@@ -578,5 +578,30 @@
     "french": ["vouloir"],
     "spanish": ["querer"],
     "category": ["verbe"]
+  },
+  {
+    "french": ["contre"],
+    "spanish": ["contra"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["payer"],
+    "spanish": ["pagar"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["fromage"],
+    "spanish": ["queso"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["bière"],
+    "spanish": ["cerveza"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["donner"],
+    "spanish": ["dar"],
+    "category": ["verbe"]
   }
 ]}

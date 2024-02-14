@@ -11,12 +11,13 @@ body {
   justify-content: center;
   background-color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
 }
 
 #main-container {
-  margin-top: 10vh;
-  max-width: fit-content;
-  min-height: 100vh;
+  /* margin-top: 10vh; */
+  width: 100%;
+  /* min-height: 100vh; */
 }
 
 a, h1 {
