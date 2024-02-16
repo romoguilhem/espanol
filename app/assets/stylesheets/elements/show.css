@@ -1,0 +1,32 @@
+#show-container {
+  align-items: right;
+  margin: 10px;
+}
+
+#list {
+  display: flex;
+  flex-direction: column; /* Aligner les éléments verticalement */
+  justify-content: space-between;
+}
+
+#list > div {
+  display: flex;
+  align-items: center; /* Centrer verticalement les éléments */
+  margin-bottom: 10px; /* Espacement entre les éléments */
+  justify-content: space-evenly;
+}
+
+#list input[type="text"] {
+  width: 200px; /* Largeur fixe pour les inputs */
+  text-align: center;
+}
+
+#list label {
+  width: 30%;
+  text-align: right;
+}
+
+#score {
+  text-align: left;
+  margin: 20px;
+}

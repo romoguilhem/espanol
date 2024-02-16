@@ -1,38 +1,63 @@
-<h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
+<div id="navbar">
+  <h1><%= link_to "Vamos a practicar nuestro espanol", root_path %></h1>
+</div>
 
-<% n = 0 %>
-<form>
-  <div id="list">
-    <% @translation_hashes.each do |hash| %>
-      <% n += 1 %>
-      <div id="word<%= n %>" style="display: flex;">
-        <label id="french<%= n %>"><%= hash["french"] %></label>
-        <input type="text" id="input<%= n %>"><br><br>
-        <%# Trick pour récupérer la traduction avec le js %>
-        <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
-      </div>
-    <% end %>
-  </div>
+<div id="show-container">
+  <% if @game.number_of_words == 1 %>
+    <h2>Traduis le mot suivant:</h2>
+  <% else %>
+    <h2>Traduis les <%= @game.number_of_words %> mots suivants:</h2>
+  <% end %>
 
-  <%# Trick pour récupérer la taille n de la liste avec le js %>
-  <div id="size" style="display: none;"><%= n %></div>
+  <% n = 0 %>
+  <form>
+    <div id="list">
+      <% @translation_hashes.each do |hash| %>
+        <% n += 1 %>
+        <div id="word<%= n %>" style="display: flex; justify-content: space-around; ">
+          <label id="french<%= n %>"><%= hash["french"].sample %></label>
+          <input type="text" id="input<%= n %>" autocomplete="off"><br><br>
+          <%# Trick pour récupérer la traduction avec le js %>
+          <div id="spanish<%= n %>" style="display: none;"><%= hash["spanish"] %></div>
+        </div>
+      <% end %>
+    </div>
 
-  <input type="submit" value="Submit" class="button">
-</form>
+    <%# Trick pour récupérer la taille n de la liste avec le js %>
+    <div id="size" style="display: none;"><%= n %></div>
 
-<div id="score"></div>
+    <div id="score"></div>
 
-<div id="buttons">
-  <div id="correction" class="button"><%= link_to "Corrige toi", correction_game_path(@game), method: :post, remote: true %></div>
-  <div id="new" class="button"><%= link_to "Nouvelle Partie", new_game_path %></div>
+    <div id="submit-buttons">
+      <input id="submit" type="submit" value="Submit" class="button">
+      <div id="correction" class="button" style="display: none;" ><%= link_to "Corrige toi", correction_game_path(@game), method: :post, remote: true %></div>
+      <div id="new" class="button" style="display: none;"><%= link_to "Nouvelle Partie", new_game_path %></div>
+    </div>
+  </form>
 </div>
 
 
 <%# Partie Javascript que je n'arrive pas à mettre dans un fichier externe au HTML %>
 <script>
-  // fonction pour enlever les accents
+  // Fonction pour enlever les accents
   function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  // Fonction pour checker si l'input est correct aux accents près
+  // A refactoriser une fois que cela marche
+  function isAlmostCorrect(inputString, spanishArray) {
+    let sizeMax = spanishArray.length - 1;
+    for (let i = 0; i <= sizeMax; i++) {
+      // S'il manque un ou plusieurs accents
+      if (inputString.toLowerCase() == removeAccents(spanishArray[i])) {
+        return true;
+      // S'il y a un/des accent(s) mais au mauvais endroit
+      } else if (removeAccents(inputString.toLowerCase()) == spanishArray[i]) {
+        return true;
+      };
+    }
+    return false;
   }
 
   // Création d'un array pour lister les réponses fausses
@@ -42,47 +67,77 @@
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("form").addEventListener("submit", function(event) {
       event.preventDefault();
-
       // Taille de la liste
       let size = document.querySelector("#size").innerHTML;
 
       // On va compter les bonnes réponses
       let point = 0;
 
+      // On parcourt le formulaire et on va corriger les réponses données
       for (let i = 1; i <= size; i++) {
         // On récupère la div du mot, l'input, le français et sa traduction
         let divWord = document.getElementById("word" + i.toString());
-        let input = document.querySelector("#input" + i.toString()).value;
+        let inputValue = document.querySelector("#input" + i.toString()).value;
+        let inputDiv = document.getElementById("input" + i.toString())
         let french = document.querySelector("#french" + i.toString()).innerHTML;
-        let spanish = document.getElementById("spanish" + i.toString()).innerHTML;
+        let frenchDiv = document.querySelector("#french" + i.toString());
+        let spanish = JSON.parse(document.getElementById("spanish" + i.toString()).innerHTML);
+        // En le récupérant ainsi, l'array spanish est une string
+        // JSON.parse le retransforme en array
 
         // Si la réponse est juste
-        if (input.toLowerCase() == spanish) {
-          divWord.style.backgroundColor = "green";
+        if (spanish.includes(inputValue.toLowerCase())) {
+          inputDiv.style.color = "green";
           point++; // Incrémentation
 
         // Si la réponse est juste mais mauvais accent(s)
-        } else if (input.toLowerCase() == removeAccents(spanish)) {
-          divWord.style.backgroundColor = "orange";
-          divWord.insertAdjacentHTML('beforeend', `Attention aux accents: ${spanish}`);
+        } else if (isAlmostCorrect(inputValue, spanish)) {
+          inputDiv.style.color = "orange";
           point++; // Incrémentation
 
         // Si la réponse est fausse
         } else {
-          divWord.style.backgroundColor = "red";
-          divWord.insertAdjacentHTML('beforeend', `${spanish}`);
+          inputDiv.style.color = "red";
+
+          // Ici le if gère les synonymes espagnols
+          // if (spanish.length == 1) {
+          //   divWord.insertAdjacentHTML('beforeend', `${spanish[0]}`);
+          // } else if (spanish.length == 2) {
+          //   divWord.insertAdjacentHTML('beforeend', `${spanish[0]} o ${spanish[1]}`);
+          // } else if (spanish.length == 3) {
+          //   divWord.insertAdjacentHTML('beforeend', `${spanish[0]} o ${spanish[1]} o ${spanish[2]}`);
+          // }
+
+          // Et on enregistre la mauvaise réponse pour correction
           errorsArray.push(`${french}`);
         }
-      };
+      
+        // Avant la fin de la boucle on en ajoute un listener sur tout les labels pour permettre la traduction en mode facile.
+        frenchDiv.addEventListener("click", function(event) {
+          event.preventDefault();
+          frenchDiv.innerHTML = `${spanish}`;
+        });
+      }
+
+      // On switch les boutons Submit et Correction
+      let submitButton = document.getElementById("submit");
+      let correctionButton = document.getElementById("correction");
+      let newButton = document.getElementById("new");
+      submitButton.style.display = "none";
+      correctionButton.style.display = "block";
+
+
       // On display le résultat
       let divScore = document.getElementById("score");
 
       if (point / size <= 0.5) {
-        divScore.innerHTML = `Java le Hutt ferait mieux: ${point} / ${size} !`;
+        divScore.innerHTML = `Jar Jar Binks ferait mieux...`;
       } else if ((0.5 <= point / size) && (point / size < 1)) {
-        divScore.innerHTML = `Pas mal Anakin: ${point} / ${size} !`;
+        divScore.innerHTML = `Pas mal Anakin !`;
       } else {
-        divScore.innerHTML = `Parfait ${point} / ${size} ! <br>Mais nous ne t'accordons toujours pas le rang de maître.`;
+        divScore.innerHTML = `Parfait ! <br>Mais nous ne t'accordons toujours pas le rang de maître.`;
+        correctionButton.style.display = "none";
+        newButton.style.display = "block";
       };
     });
   });
@@ -91,10 +146,10 @@
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("correction").addEventListener("click", function(event) {
       event.preventDefault();
-      console.log("Je suis ton père");
       // Pour checker la tête de l'array dans la console
       console.log(errorsArray);
       fetch("/games/correction", {
+        // On renvoie l'errorsArray au backend pour créer une nouvelle game avec les traductions erronées
         method: "POST",
         headers: {
           "Content-Type": 'application/json',
@@ -104,10 +159,11 @@
       })
       .then(response => {
         if (!response.ok) {
+          // Check si quelque chose merde
           console.error('Erreur lors de la requête:', response.status, response.statusText);
           throw new Error('Erreur lors de l\'envoi de l\'array au back-end');
         }
-        // On récupère l'url voulu avec la réponse du back-end
+        // On récupère l'url voulu avec la réponse du back-end et on redirige
         console.log(response.url);
         window.location.href = response.url;
       })

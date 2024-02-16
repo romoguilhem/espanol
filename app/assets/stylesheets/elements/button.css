@@ -1,0 +1,35 @@
+/* General button look */
+
+.button {
+  background-color: aquamarine;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bolder;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  max-width: fit-content;
+}
+
+.button:hover {
+  opacity: 0.6;
+  color: grey;
+}
+
+#buttons {
+  display: flex;
+}
+
+#submit-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#comenzar-button {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+

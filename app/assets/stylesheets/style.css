@@ -1,20 +1,30 @@
-.button {
-  background-color: aquamarine;
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  max-width: fit-content;
-}
+/* All imports */
+@import "elements/button.css";
+@import "elements/navbar.css";
+@import "elements/new.css";
+@import "elements/show.css";
 
-.button:hover {
-  opacity: 1;
-  color: grey;
-}
+/* And some general css for the app */
 
-#buttons {
+body {
   display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+}
+
+#main-container {
+  /* margin-top: 10vh; */
+  width: 100%;
+  /* min-height: 100vh; */
+}
+
+a, h1 {
+  text-decoration: none;
+  color: cadetblue; 
+}
+
+a:visited {
+  color: cadetblue; 
 }
