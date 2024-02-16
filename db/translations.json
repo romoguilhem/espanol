@@ -603,5 +603,20 @@
     "french": ["donner"],
     "spanish": ["dar"],
     "category": ["verbe"]
+  },
+  {
+    "french": ["chemise"],
+    "spanish": ["camisa"],
+    "category": ["vétements"]
+  },
+  {
+    "french": ["sandwich"],
+    "spanish": ["emparedado"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["lion"],
+    "spanish": ["léon"],
+    "category": ["animaux"]
   }
 ]}
