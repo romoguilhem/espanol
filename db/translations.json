@@ -130,6 +130,11 @@
     "category": ["animaux"]
   },
   {
+    "french": ["une couleur"],
+    "spanish": ["un color"],
+    "category": ["divers"]
+  },
+  {
     "french": ["blanc"],
     "spanish": ["blanco"],
     "category": ["couleurs"]
@@ -155,19 +160,29 @@
     "category": ["couleurs"]
   },
   {
+    "french": ["vert", "verte"],
+    "spanish": ["verde"],
+    "category": ["divers"]
+  },
+  {
     "french": ["bleu"],
     "spanish": ["azul"],
     "category": ["couleurs"]
   },
   {
+    "french": ["rouge"],
+    "spanish": ["rojo"],
+    "category": ["couleurs"]
+  },
+  {
     "french": ["sucre"],
     "spanish": ["azucar"],
-    "category": ["couleurs"]
+    "category": ["cuisine"]
   },
   {
     "french": ["marcher"],
     "spanish": ["caminar", "andar"],
-    "category": ["couleurs"]
+    "category": ["verbes"]
   },
   {
     "french": ["cuisiner"],
@@ -185,9 +200,9 @@
     "category": ["vétements"]
   },
   {
-    "french": ["rouge"],
-    "spanish": ["rojo"],
-    "category": ["couleurs"]
+    "french": ["clés", "clefs"],
+    "spanish": ["llaves"],
+    "category": ["divers"]
   },
   {
     "french": ["lire"],
@@ -213,6 +228,11 @@
     "french": ["livre"],
     "spanish": ["libro"],
     "category": ["divers"]
+  },
+  {
+    "french": ["cheval"],
+    "spanish": ["caballo"],
+    "category": ["animaux"]
   },
   {
     "french": ["boire"],
@@ -380,6 +400,16 @@
     "category": ["divers"]
   },
   {
+    "french": ["notre"],
+    "spanish": ["nuestro", "nuestra"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["nos"],
+    "spanish": ["nuestros", "nuestras"],
+    "category": ["divers"]
+  },
+  {
     "french": ["anniversaire"],
     "spanish": ["cumpleaños"],
     "category": ["temps"]
@@ -530,6 +560,11 @@
     "category": ["verbe"]
   },
   {
+    "french": ["se promener"],
+    "spanish": ["pasear"],
+    "category": ["verbe"]
+  },
+  {
     "french": ["selon"],
     "spanish": ["según"],
     "category": ["conjonction"]
@@ -542,6 +577,11 @@
   {
     "french": ["le"],
     "spanish": ["el", "lo"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["dans"],
+    "spanish": ["en"],
     "category": ["conjonction"]
   },
   {
@@ -565,8 +605,28 @@
     "category": ["conjonction"]
   },
   {
+    "french": ["excuse moi"],
+    "spanish": ["disculpe"],
+    "category": ["conversation"]
+  },
+  {
+    "french": ["désolé"],
+    "spanish": ["lo siento"],
+    "category": ["conversation"]
+  },
+  {
     "french": ["écouter"],
     "spanish": ["escuchar"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["se baigner"],
+    "spanish": ["bañarse"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["faire"],
+    "spanish": ["hacer"],
     "category": ["verbe"]
   },
   {
@@ -618,5 +678,165 @@
     "french": ["lion"],
     "spanish": ["léon"],
     "category": ["animaux"]
+  },
+  {
+    "french": ["oeuf"],
+    "spanish": ["huevo"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["riz"],
+    "spanish": ["arroz"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["pain"],
+    "spanish": ["pan"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["ours"],
+    "spanish": ["oso"],
+    "category": ["animaux"]
+  },
+  {
+    "french": ["papa"],
+    "spanish": ["papá"],
+    "category": ["famille"]
+  },
+  {
+    "french": ["maman"],
+    "spanish": ["mamá"],
+    "category": ["famille"]
+  },
+  {
+    "french": ["handicapé"],
+    "spanish": ["discapacitado"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["dormir"],
+    "spanish": ["dormir"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["petit garçon"],
+    "spanish": ["niño"],
+    "category": ["famille"]
+  },
+  {
+    "french": ["petite fill"],
+    "spanish": ["niña"],
+    "category": ["famille"]
+  },
+  {
+    "french": ["près"],
+    "spanish": ["cerca"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["question"],
+    "spanish": ["pregunta"],
+    "category": ["poser des questions"]
+  },
+  {
+    "french": ["pomme"],
+    "spanish": ["manzana"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["ou"],
+    "spanish": ["o"],
+    "category": ["conjonction"]
+  },
+  {
+    "french": ["apprendre"],
+    "spanish": ["aprender"],
+    "category": ["verbe"]
+  },
+  {
+    "french": ["un berceau"],
+    "spanish": ["una cuna"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["téléphone"],
+    "spanish": ["teléfono"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["télévision"],
+    "spanish": ["televisión"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["piscine"],
+    "spanish": ["piscina"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["tasse"],
+    "spanish": ["taza"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["cuisine"],
+    "spanish": ["cocina"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["à propos"],
+    "spanish": ["acerca"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["sauce"],
+    "spanish": ["salsa"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["éponge"],
+    "spanish": ["esponja"],
+    "category": ["cuisine", "la maison"]
+  },
+  {
+    "french": ["lampe"],
+    "spanish": ["lámpara"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["porte"],
+    "spanish": ["puerta"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["canapé"],
+    "spanish": ["sofá"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["bureau"],
+    "spanish": ["escritorio"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["poêle"],
+    "spanish": ["sartén"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["miroir"],
+    "spanish": ["espejo"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["thé"],
+    "spanish": ["té"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["manchot", "pingouin"],
+    "spanish": ["pingüino"],
+    "category": ["cuisine"]
   }
 ]}
