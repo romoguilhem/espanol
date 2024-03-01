@@ -521,7 +521,7 @@
   },
   {
     "french": ["journal"],
-    "spanish": ["periódico"],
+    "spanish": ["periódico", "diario"],
     "category": ["quotidien"]
   },
   {
@@ -837,6 +837,56 @@
   {
     "french": ["manchot", "pingouin"],
     "spanish": ["pingüino"],
-    "category": ["cuisine"]
+    "category": ["animaux"]
+  },
+  {
+    "french": ["four"],
+    "spanish": ["horno"],
+    "category": ["cuisine", "la maison"]
+  },
+  {
+    "french": ["sol", "étage"],
+    "spanish": ["piso"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["un mur"],
+    "spanish": ["una pared"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["toit"],
+    "spanish": ["techo"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["ta chambre"],
+    "spanish": ["tu dormitorio"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["une cave"],
+    "spanish": ["un sótano"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["les escaliers"],
+    "spanish": ["las escaleras"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["un dîner"],
+    "spanish": ["una cena"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["les mot"],
+    "spanish": ["las palabras"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["un séchoir"],
+    "spanish": ["una secadora"],
+    "category": ["la maison"]
   }
 ]}
