@@ -176,7 +176,7 @@
   },
   {
     "french": ["sucre"],
-    "spanish": ["azucar"],
+    "spanish": ["azúcar"],
     "category": ["cuisine"]
   },
   {
@@ -888,5 +888,40 @@
     "french": ["un séchoir"],
     "spanish": ["una secadora"],
     "category": ["la maison"]
+  },
+  {
+    "french": ["le sèche-linge"],
+    "spanish": ["la secadora de ropa"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["une chambre"],
+    "spanish": ["una habitación"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["réfrigérateur"],
+    "spanish": ["refrigerador"],
+    "category": ["la maison", "cuisine"]
+  },
+  {
+    "french": ["la brosse"],
+    "spanish": ["el cepillo"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["le lave-linge", "machine à laver"],
+    "spanish": ["la lavadora"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["les toilettes"],
+    "spanish": ["los baños"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["nettoyer"],
+    "spanish": ["limpiar"],
+    "category": ["verbes"]
   }
 ]}
