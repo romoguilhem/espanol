@@ -923,5 +923,30 @@
     "french": ["nettoyer"],
     "spanish": ["limpiar"],
     "category": ["verbes"]
+  },
+  {
+    "french": ["savon"],
+    "spanish": ["jabón"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["un parapluie"],
+    "spanish": ["un paraguas"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["un portefeuille"],
+    "spanish": ["una cartera"],
+    "category": ["divers"]
+  },
+  {
+    "french": ["le drap"],
+    "spanish": ["la sábana"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["un rasoir"],
+    "spanish": ["una rasuradora"],
+    "category": ["la maison"]
   }
 ]}
