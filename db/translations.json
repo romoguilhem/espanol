@@ -948,5 +948,45 @@
     "french": ["un rasoir"],
     "spanish": ["una rasuradora"],
     "category": ["la maison"]
+  },
+  {
+    "french": ["le lit"],
+    "spanish": ["la cama"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["la cave", "le sous-sol"],
+    "spanish": ["el sótano", "la bodega"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["les murs"],
+    "spanish": ["las paredes"],
+    "category": ["la maison"]
+  },
+  {
+    "french": ["petit ami"],
+    "spanish": ["novio"],
+    "category": ["famille"]
+  },
+  {
+    "french": ["la cuillère"],
+    "spanish": ["la cuchara"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["la poêle"],
+    "spanish": ["la sartén"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["un couteau"],
+    "spanish": ["un cuchillo"],
+    "category": ["cuisine"]
+  },
+  {
+    "french": ["une fourchette"],
+    "spanish": ["un tenedor"],
+    "category": ["cuisine"]
   }
 ]}
